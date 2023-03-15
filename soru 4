@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+struct ogrenci{
+    char ad[30];
+    char soyad[30];
+    int no;
+    char adres[70];
+  };
+
+int main() {
+    struct ogrenci ogr[5];
+    for(int i=0; i<5; i++){
+        printf("\n%d. ogrencinin bilgilerini girin: \n",i+1);
+        printf("Ad: ");
+        scanf("%s",ogr[i].ad);
+        printf("Soyad: ");
+        scanf("%s",ogr[i].soyad);
+        printf("No: ");
+        scanf("%d",&ogr[i].no);
+        printf("Adres: ");
+        scanf("%s", ogr[i].adres);
+    }
+
+
+    printf("\n--- Ogrenci Bilgileri ---\n");
+    for(int i=0; i<5; i++) {
+        printf("\n%d. ogrencinin bilgileri:\n", i+1);
+        printf("Ad: %s\n", ogr[i].ad);
+        printf("Soyad: %s\n", ogr[i].soyad);
+        printf("No: %d\n", ogr[i].no);
+        printf("Adres: %s\n", ogr[i].adres);
+        printf("..............................");
+        
+    }
+
+    
+    return 0;
+}
